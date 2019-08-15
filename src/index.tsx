@@ -1,5 +1,5 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './App';
+import AnalogWatch from './AnalogWatch';
 
-ReactDOM.render(<App />, document.getElementById('root'));
+ReactDOM.render(<AnalogWatch />, document.getElementById('root'));
