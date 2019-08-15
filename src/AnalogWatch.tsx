@@ -56,11 +56,11 @@ const AnalogWatch: React.FC = () => {
         ctx.stroke();
         ctx.restore();
 
-        // hours * 30
+        // hours * 30 + minutes * 0.5
         ctx.save();
         ctx.lineWidth = 6;
         ctx.translate(WIDTH / 2, HEIGHT / 2);
-        ctx.rotate(getRadians(hours * 30));
+        ctx.rotate(getRadians(hours * 30 + minutes * 0.5));
         ctx.beginPath();
         ctx.moveTo(0, 10);
         ctx.lineTo(0, -RADIUS + 50);
@@ -69,23 +69,23 @@ const AnalogWatch: React.FC = () => {
 
         // minutes * 6
         ctx.save();
-        ctx.lineWidth = 6;
+        ctx.lineWidth = 4;
         ctx.translate(WIDTH / 2, HEIGHT / 2);
         ctx.rotate(getRadians(minutes * 6));
         ctx.beginPath();
         ctx.moveTo(0, 10);
-        ctx.lineTo(0, -RADIUS + 50);
+        ctx.lineTo(0, -RADIUS + 30);
         ctx.stroke();
         ctx.restore();
 
         // seconds * 6
         ctx.save();
-        ctx.lineWidth = 6;
+        ctx.strokeStyle = 'red';
         ctx.translate(WIDTH / 2, HEIGHT / 2);
         ctx.rotate(getRadians(seconds * 6));
         ctx.beginPath();
         ctx.moveTo(0, 10);
-        ctx.lineTo(0, -RADIUS + 50);
+        ctx.lineTo(0, -RADIUS + 20);
         ctx.stroke();
         ctx.restore();
       }
