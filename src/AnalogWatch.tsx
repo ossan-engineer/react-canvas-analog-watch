@@ -14,6 +14,7 @@ const AnalogWatch: React.FC = () => {
     const WIDTH = canvas.width;
     const HEIGHT = canvas.height;
     const RADIUS = 100;
+    let angle;
 
     const ctx: CanvasRenderingContext2D | null = canvas.getContext('2d');
 
@@ -25,6 +26,24 @@ const AnalogWatch: React.FC = () => {
       ctx.beginPath();
       ctx.arc(WIDTH / 2, HEIGHT / 2, RADIUS, 0, 2 * Math.PI);
       ctx.stroke();
+
+      for (angle = 0; angle < 360; angle += 6) {
+        ctx.save();
+        ctx.translate(WIDTH / 2, HEIGHT / 2);
+        ctx.rotate((Math.PI / 180) * angle);
+        ctx.beginPath();
+        ctx.moveTo(0, -RADIUS);
+
+        if (angle % 30 === 0) {
+          ctx.lineTo(0, -RADIUS + 10);
+          ctx.lineWidth = 2;
+        } else {
+          ctx.lineTo(0, -RADIUS + 5);
+        }
+
+        ctx.stroke();
+        ctx.restore();
+      }
     };
 
     draw();
