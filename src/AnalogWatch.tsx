@@ -28,9 +28,9 @@ const AnalogWatch: React.FC = () => {
     const getRadians = (degrees: number) => (Math.PI / 180) * degrees;
 
     const draw = () => {
-      hours = 9;
-      minutes = 23;
-      seconds = 42;
+      hours = new Date().getHours();
+      minutes = new Date().getMinutes();
+      seconds = new Date().getSeconds();
       // ctx.beginPath();
       // ctx.arc(WIDTH / 2, HEIGHT / 2, RADIUS, 0, getRadians(360));
       // ctx.stroke();
@@ -91,8 +91,16 @@ const AnalogWatch: React.FC = () => {
       }
     };
 
-    draw();
-  });
+    const update = () => {
+      ctx.clearRect(0, 0, WIDTH, HEIGHT);
+      draw();
+      setTimeout(() => {
+        update();
+      }, 100);
+    };
+
+    update();
+  }, []);
 
   return <canvas width="300" height="260" ref={canvasRef} />;
 };
