@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/static/css/main.ea9c23a2.chunk.css",
-    "main.js": "/static/js/main.fc91b7da.chunk.js",
-    "main.js.map": "/static/js/main.fc91b7da.chunk.js.map",
-    "runtime~main.js": "/static/js/runtime~main.fb8517e7.js",
-    "runtime~main.js.map": "/static/js/runtime~main.fb8517e7.js.map",
-    "static/js/2.c7a26323.chunk.js": "/static/js/2.c7a26323.chunk.js",
-    "static/js/2.c7a26323.chunk.js.map": "/static/js/2.c7a26323.chunk.js.map",
-    "index.html": "/index.html",
-    "precache-manifest.7335eaff138dfa4c789d72ba7e0f594e.js": "/precache-manifest.7335eaff138dfa4c789d72ba7e0f594e.js",
-    "service-worker.js": "/service-worker.js",
-    "static/css/main.ea9c23a2.chunk.css.map": "/static/css/main.ea9c23a2.chunk.css.map"
+    "main.css": "/react-canvas-analog-watch/static/css/main.ea9c23a2.chunk.css",
+    "main.js": "/react-canvas-analog-watch/static/js/main.fc91b7da.chunk.js",
+    "main.js.map": "/react-canvas-analog-watch/static/js/main.fc91b7da.chunk.js.map",
+    "runtime~main.js": "/react-canvas-analog-watch/static/js/runtime~main.2b0f40c3.js",
+    "runtime~main.js.map": "/react-canvas-analog-watch/static/js/runtime~main.2b0f40c3.js.map",
+    "static/js/2.c7a26323.chunk.js": "/react-canvas-analog-watch/static/js/2.c7a26323.chunk.js",
+    "static/js/2.c7a26323.chunk.js.map": "/react-canvas-analog-watch/static/js/2.c7a26323.chunk.js.map",
+    "index.html": "/react-canvas-analog-watch/index.html",
+    "precache-manifest.9981f41cd18b43a05678ab7b81539284.js": "/react-canvas-analog-watch/precache-manifest.9981f41cd18b43a05678ab7b81539284.js",
+    "service-worker.js": "/react-canvas-analog-watch/service-worker.js",
+    "static/css/main.ea9c23a2.chunk.css.map": "/react-canvas-analog-watch/static/css/main.ea9c23a2.chunk.css.map"
   }
 }

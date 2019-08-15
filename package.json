@@ -1,6 +1,7 @@
 {
   "name": "react-canvas-analog-watch",
   "version": "0.1.0",
+  "homepage": "https://ossan-engineer.github.io/react-canvas-analog-watch/",
   "private": true,
   "dependencies": {
     "@types/jest": "24.0.17",
