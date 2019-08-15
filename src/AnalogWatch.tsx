@@ -14,7 +14,10 @@ const AnalogWatch: React.FC = () => {
     const WIDTH = canvas.width;
     const HEIGHT = canvas.height;
     const RADIUS = 100;
-    let angle;
+    let angle = 0;
+    let hours = 0;
+    let minutes = 0;
+    let seconds = 0;
 
     const ctx: CanvasRenderingContext2D | null = canvas.getContext('2d');
 
@@ -25,6 +28,9 @@ const AnalogWatch: React.FC = () => {
     const getRadians = (degrees: number) => (Math.PI / 180) * degrees;
 
     const draw = () => {
+      hours = 9;
+      minutes = 23;
+      seconds = 42;
       // ctx.beginPath();
       // ctx.arc(WIDTH / 2, HEIGHT / 2, RADIUS, 0, getRadians(360));
       // ctx.stroke();
@@ -47,6 +53,39 @@ const AnalogWatch: React.FC = () => {
           ctx.lineTo(0, -RADIUS + 5);
         }
 
+        ctx.stroke();
+        ctx.restore();
+
+        // hours * 30
+        ctx.save();
+        ctx.lineWidth = 6;
+        ctx.translate(WIDTH / 2, HEIGHT / 2);
+        ctx.rotate(getRadians(hours * 30));
+        ctx.beginPath();
+        ctx.moveTo(0, 10);
+        ctx.lineTo(0, -RADIUS + 50);
+        ctx.stroke();
+        ctx.restore();
+
+        // minutes * 6
+        ctx.save();
+        ctx.lineWidth = 6;
+        ctx.translate(WIDTH / 2, HEIGHT / 2);
+        ctx.rotate(getRadians(minutes * 6));
+        ctx.beginPath();
+        ctx.moveTo(0, 10);
+        ctx.lineTo(0, -RADIUS + 50);
+        ctx.stroke();
+        ctx.restore();
+
+        // seconds * 6
+        ctx.save();
+        ctx.lineWidth = 6;
+        ctx.translate(WIDTH / 2, HEIGHT / 2);
+        ctx.rotate(getRadians(seconds * 6));
+        ctx.beginPath();
+        ctx.moveTo(0, 10);
+        ctx.lineTo(0, -RADIUS + 50);
         ctx.stroke();
         ctx.restore();
       }
