@@ -13,17 +13,24 @@ const AnalogWatch: React.FC = () => {
 
     const WIDTH = canvas.width;
     const HEIGHT = canvas.height;
-    const RADIUS = 100;
-    let angle = 0;
-    let hours = 0;
-    let minutes = 0;
-    let seconds = 0;
-
+    const dpr = window.devicePixelRatio || 1;
     const ctx: CanvasRenderingContext2D | null = canvas.getContext('2d');
 
     if (!ctx) {
       return;
     }
+
+    canvas.width = WIDTH * dpr;
+    canvas.height = HEIGHT * dpr;
+    ctx.scale(dpr, dpr);
+    canvas.style.width = WIDTH + 'px';
+    canvas.style.height = HEIGHT + 'px';
+
+    const RADIUS = 100;
+    let angle = 0;
+    let hours = 0;
+    let minutes = 0;
+    let seconds = 0;
 
     const getRadians = (degrees: number) => (Math.PI / 180) * degrees;
 
